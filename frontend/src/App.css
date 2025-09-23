@@ -1,0 +1,151 @@
+/* App容器样式 */
+.app-container {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background-color: #1a1a1a;
+}
+
+/* 头部样式 */
+.app-header {
+  background-color: #242424;
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #333;
+}
+
+.app-header h1 {
+  font-size: 1.8rem;
+  color: #646cff;
+}
+
+/* 连接状态样式 */
+.connection-status {
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+
+.connection-status.connected {
+  background-color: rgba(0, 255, 0, 0.2);
+  color: #4caf50;
+}
+
+.connection-status.disconnected {
+  background-color: rgba(255, 0, 0, 0.2);
+  color: #f44336;
+}
+
+/* 主内容区域样式 */
+.app-main {
+  flex: 1;
+  padding: 2rem;
+  max-width: 1200px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+/* 欢迎区域样式 */
+.welcome-section {
+  text-align: center;
+  margin-bottom: 3rem;
+  padding: 2rem;
+  background-color: #242424;
+  border-radius: 8px;
+  border: 1px solid #333;
+}
+
+.welcome-section h2 {
+  font-size: 2.2rem;
+  margin-bottom: 1rem;
+  color: #646cff;
+}
+
+.welcome-section p {
+  font-size: 1.1rem;
+  color: #ccc;
+  margin-bottom: 2rem;
+}
+
+/* 按钮样式 */
+.check-connection-btn {
+  background-color: #646cff;
+  color: white;
+  border: none;
+  padding: 0.8rem 2rem;
+  font-size: 1rem;
+  font-weight: 500;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.check-connection-btn:hover {
+  background-color: #535bf2;
+}
+
+/* 功能预览区域样式 */
+.features-preview {
+  margin-bottom: 2rem;
+}
+
+.features-preview h3 {
+  font-size: 1.5rem;
+  margin-bottom: 1.5rem;
+  color: #eee;
+}
+
+/* 功能卡片样式 */
+.feature-card {
+  background-color: #242424;
+  padding: 1.5rem;
+  margin-bottom: 1rem;
+  border-radius: 8px;
+  border: 1px solid #333;
+  transition: transform 0.2s, border-color 0.2s;
+}
+
+.feature-card:hover {
+  transform: translateY(-2px);
+  border-color: #646cff;
+}
+
+.feature-card h4 {
+  font-size: 1.2rem;
+  margin-bottom: 0.5rem;
+  color: #646cff;
+}
+
+.feature-card p {
+  color: #ccc;
+}
+
+/* 页脚样式 */
+.app-footer {
+  background-color: #242424;
+  padding: 1rem 2rem;
+  text-align: center;
+  border-top: 1px solid #333;
+  color: #888;
+}
+
+/* 响应式设计 */
+@media (max-width: 768px) {
+  .app-header {
+    flex-direction: column;
+    gap: 1rem;
+    text-align: center;
+  }
+  
+  .app-main {
+    padding: 1rem;
+  }
+  
+  .welcome-section h2 {
+    font-size: 1.8rem;
+  }
+}
