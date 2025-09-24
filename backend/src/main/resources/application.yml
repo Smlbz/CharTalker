@@ -1,0 +1,47 @@
+server:
+  port: 48080
+
+spring:
+  application:
+    name: char-talker
+  #连接本地数据库
+  datasource:
+    type: com.alibaba.druid.pool.DruidDataSource
+    url: jdbc:mysql://localhost:3306/char_talker?useUnicode=true&allowPublicKeyRetrieval=true&characterEncoding=utf-8&useSSL=false&serverTimezone=Asia/Shanghai
+    username: root
+    password: Songlove15youqAz
+    driver-class-name: com.mysql.cj.jdbc.Driver
+
+    druid:
+      #druid数据源专有配置
+      initialSize: 5
+      minIdle: 5
+      maxActive: 20
+      maxWait: 600000
+
+      #开启druid监控统计
+      filter:
+        slf4j:
+          enabled: true
+        stat:
+          enabled: true
+          merge-sql: true
+          slow-sql-millis: 5000
+        wall:
+          enabled: true
+      #配置stat-view-servlet
+      stat-view-servlet:
+        enabled: true
+        login-username: admin
+        login-password: 123456
+        reset-enable: false
+      #配置web-stat-filter
+      web-stat-filter:
+        enabled: true
+  data:
+    redis:
+      host: 127.0.0.1
+      port: 6379
+mybatis-plus:
+  global-config:
+    banner: false
